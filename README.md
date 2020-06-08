@@ -353,5 +353,5 @@ Min = 22.4
 Y nuestra gráfica en HTML se vera así.
 
 <div align="center"> 
-  <img src="readme_img/random-walk-chart.png" height="400">
+  <img src="readme_img/random-walk-chart.png" width="70%">
 </div>
