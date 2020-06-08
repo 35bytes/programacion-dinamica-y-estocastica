@@ -22,6 +22,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Introducción a la Programación Estocástica](#Introducción-a-la-Programación-Estocástica)
     - [Cálculo de Probabilidades](#Cálculo-de-Probabilidades)
     - [Simulación de Probabilidades](#Simulación-de-Probabilidades)
+    - [Inferencia Estadística](#Inferencia-Estadística)
 
 # Objetivos
 - Aprender cuándo utilizar Programación Dinámica y sus beneficios.
@@ -434,7 +435,7 @@ def main(numero_de_tiros, numero_de_intentos):
     tiros_con_1 = 0
     for tiro in tiros:
         if 1 not in tiro:
-            tiros_con_1 += 1
+            tiros_con_1 += 1 
 
     probabilidad_tiros_con_1 = tiros_con_1 / numero_de_intentos
     print(f'Probabilidad de no obtener por lo menos un 1 en {numero_de_tiros} tiros = {probabilidad_tiros_con_1}')
@@ -447,3 +448,29 @@ if __name__ == '__main__':
 
     main(numero_de_tiros, numero_de_intentos)
 ```
+
+## Inferencia Estadística
+
+Con las simulaciones podemos calcular las probabilidades de eventos complejos sabiendo las probabilidades de eventos simples.
+
+¿Que pasa cuando no sabemos las probabilidades de los eventos simples? Las técnicas de la **inferencia estadística** nos permiten inferir/concluir las propiedades de una población a partir de una muestra **aleatoria.**
+
+_"El principio guía de la **inferencia estadística** es que una muestra aleatoria tiende a exhibir las mismas propiedades que la población de la cual fue extraída."_ - John Guttag
+
+<div align="center"> 
+  <img src="readme_img/poblacion-muestra.jpeg" width="40%">
+</div>
+
+### Ley de los grandes números
+
+Con la **ley de los grandes números** podemos ver que en pruebas independientes repetidas con la misma probabilidad p de un resultado, la fracción de desviaciones de p converge a cero conforme la cantidad de pruebas se acerca al infinito.
+
+<div align="center"> 
+  <img src="readme_img/grandes-numeros.png" width="30%">
+</div>
+
+### Falacia del apostador
+
+La **falacia del apostador** señala que después de un evento extremo, ocurrirán eventos menos extremos para nivelar la media.
+
+La _regresion a la media_ señala que después de un evento aleatorio extremo, el siguiente evento probablemente será menos extremo.
