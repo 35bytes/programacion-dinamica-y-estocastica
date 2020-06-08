@@ -23,6 +23,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Cálculo de Probabilidades](#Cálculo-de-Probabilidades)
     - [Simulación de Probabilidades](#Simulación-de-Probabilidades)
     - [Inferencia Estadística](#Inferencia-Estadística)
+    - [Media](#Media)
 
 # Objetivos
 - Aprender cuándo utilizar Programación Dinámica y sus beneficios.
@@ -474,3 +475,27 @@ Con la **ley de los grandes números** podemos ver que en pruebas independientes
 La **falacia del apostador** señala que después de un evento extremo, ocurrirán eventos menos extremos para nivelar la media.
 
 La _regresion a la media_ señala que después de un evento aleatorio extremo, el siguiente evento probablemente será menos extremo.
+
+## Media
+
+La **media** es una medida de tendencia central, comúnmente conocido como promedio. La media de una población se denota con el símbolo μ y la media de una muestra se define con X̄.
+
+<div align="center"> 
+  <img src="readme_img/promedio.png" width="30%">
+</div>
+
+Una forma de calcular la media con Python seria la siguiente.
+
+```py
+import random
+
+def media(X):
+    return sum(X) / len(X)
+
+if __name__ == '__main__':
+    X = [random.randint(9, 12) for i in range(20)]
+    mu = media(X)
+
+    print(f'Arreglo X: {X}')
+    print(f'Media = {mu}')
+```
