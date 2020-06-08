@@ -18,6 +18,9 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
 - [Caminos Aleatorios](#Caminos-Aleatorios)
     - [¿Qué son los caminos aleatorios?](#¿Qué-son-los-caminos-aleatorios?)
     - [Camino de Borrachos](#Camino-de-Borrachos)
+- [Programas Estocásticos](#Programas-Estocásticos)
+    - [Introducción a la Programación Estocástica](#Introducción-a-la-Programación-Estocástica)
+    - [Cálculo de Probabilidades](#Cálculo-de-Probabilidades)
 
 # Objetivos
 - Aprender cuándo utilizar Programación Dinámica y sus beneficios.
@@ -330,7 +333,7 @@ Para ejecutar nuestro programa iremos nuevamente a la consola.
 ```bash
 python3 camino_aleatorio.py     # Ejecutamos nuestro programa
 
-# Y nuestros resultados seran:
+# Y veremos nuestros resultados:
 
 BorrachoTradicional caminata aleatoria de 10 pasos
 Media = 2.639
@@ -355,3 +358,53 @@ Y nuestra gráfica en HTML se vera así.
 <div align="center"> 
   <img src="readme_img/random-walk-chart.png" width="70%">
 </div>
+
+# Programas Estocásticos
+
+## Introducción a la Programación Estocástica
+
+Un programa es **determinístico** cuando se corre con un mismo _input_ produce el mismo _output_. Los programas **determinísticos** son muy importantes, pero existen problemas que no pueden resolverse de esa manera.
+
+La **programación estocástica** permite introducir aleatoriedad a nuestros programas para crear simulaciones que permiten resolver otro tipo de problemas. Los **programas estocásticos** se aprovechan de que las **distribuciones probabilísticas** de un problema se conocen o pueden ser estimadas.
+
+## Cálculo de Probabilidades
+
+La **probabilidad** es una medida de la certidumbre asociada a un evento o suceso futuro y suele expresarse como un número entre 0 y 1. Una **probabilidad** de 0 significa que un suceso jamás sucederá, y en su contraparte una **probabilidad** de 1 significa que está garantizado que sucederá.
+
+Al hablar de **probabilidad** preguntamos qué fracción de todos los posibles eventos tiene la propiedad que buscamos, por eso es importante poder calcular todas las posibilidades de un evento para entender su probabilidad. La probabilidad de que un **evento suceda** y de que **no suceda** es siempre **1**.
+
+- Ley del complemento:
+    - P(A) + P(~A) = 1
+
+- Ley multiplicativa:
+    - P(A y B) = P(A) * P(B)
+
+- Ley aditiva:
+    - Mutuamente exclusivos: P(A o B) = P(A) + P(B)
+
+    - No exclusivos: P(A o B) = P(A) + P(B) - P(A y B)
+    
+
+
+Para ver un ejemplo práctico de las leyes anteriores vamos a realizar un ejercicio de el lanzamiento de un dado de 6 caras:
+
+- La probabilidad de que salga el número **1**:
+    
+    Tenemos **6** posibilidades y el número **1** es una de ellas, por lo que la probabilidad es **1/6**.
+
+- La probabilidad de que nos toque el numero **1 o 2:**
+
+    Tenemos **6** posibilidades y el número **1** es una de ellas y el **2** es otra. El que nos toque un número es **mutuamente exclusivo**, ya que no podemos obtener 2 números al mismo tiempo. Bajo esta premisa utilizaremos la **ley aditiva mutuamente exclusiva.**
+
+    `P(1 o 2) = P(1) + P(2) `
+
+    `P(1 o 2) = 1/6 + 1/6`
+
+    `P(1 o 2) = 2/6`
+
+- La probabilidad de que nos salga el número **1** al menos **1 vez** en **10 lanzamientos**:
+
+    Para cada lanzamiento tenemos la posibilidad de **1/6** de que nos toque **1**, por lo que utilizamos la **ley multiplicativa.**
+
+    `(1/6)^10 = 0.8333`
+
