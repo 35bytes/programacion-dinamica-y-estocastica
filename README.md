@@ -41,7 +41,7 @@ Los problemas que puede optimizar son aquellos que tienen una **subestructura ó
 
 También nos podemos encontrar con los **problemas empalmados**, los cuales implican resolver el mismo problema en varias ocasiones para dar con una solución óptima.
 
-Una técnica para obtener una alta velocidad en nuestro programa es la **Memorización**, el cual consiste en guardar cómputos previos y evitar realizarlos nuevamente. Normalmente se utiliza un diccionario, donde las consultas se pueden hacer en **O(1)**, y para ello hacemos un cambio de _tiempo por espacio._
+Una técnica para obtener una alta velocidad en nuestro programa es la **Memorización**, el cual consiste en guardar cómputos previos y evitar realizarlos nuevamente. Normalmente se utiliza un diccionario, donde las consultas se pueden hacer en `O(1)`, y para ello hacemos un cambio de _tiempo por espacio._
 
 ## Optimización de Fibonacci
 
@@ -52,7 +52,7 @@ La serie de _Fibonacci_ se representa como `Fn = Fn-1 + Fn-2` y es muy simple im
   <p>Algoritmo de Fibonnaci</p>
 </div>
 
-Si te fijas en la imagen te darás cuenta de que repetimos varias veces el calculo para **f(4), f(3), f(2), f(1) y f(0)**, esto significa que nuestro algoritmo crece de forma **exponencial O(2^n)**.
+Si te fijas en la imagen te darás cuenta de que repetimos varias veces el calculo para `f(4), f(3), f(2), f(1) y f(0)`, esto significa que nuestro algoritmo crece de forma **exponencial** `O(2^n)`.
 
 Para optimizar nuestro algoritmo implementaremos en primer lugar la **función recursiva** para luego dar paso a la **memorización**, con esto las mejoras serán realmente sorprendentes.
 
