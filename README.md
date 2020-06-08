@@ -25,6 +25,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Inferencia Estadística](#Inferencia-Estadística)
     - [Media](#Media)
     - [Varianza y Desviación Estándar](#Varianza-y-Desviación-Estándar)
+    - [Distribución Normal](#Distribución-Normal)
 
 # Objetivos
 - Aprender cuándo utilizar Programación Dinámica y sus beneficios.
@@ -556,3 +557,31 @@ if __name__ == '__main__':
     print(f'Varianza = {Var}')
     print(f'Desviacion estandar = {sigma}')
 ```
+
+## Distribución Normal
+
+La **distribución normal** es una de las distribuciones mas recurrentes en cualquier ámbito. Se define completamente por su **media** y su **desviación estándar**. Permite calcular **intervalos de confianza** con la regla empírica.
+
+<div align="center"> 
+  <img src="readme_img/distribucion-normal.png" width="30%">
+</div>
+
+En el siguiente ejemplo vamos una unas distribuciones con desviación estándar 1 y 3. Cuando la desviación es baja significa la variabilidad de los datos es menor.
+
+<div align="center"> 
+  <img src="readme_img/variation-samples.webp" width="60%">
+</div>
+
+### Regla empírica
+
+También conocida como la regla 68-95-99.7. Señala cuál es la dispersión de los datos en una distribución normal a uno, dos y tres sigmas.
+
+Permite calcular probabilidades con la densidad de la distribución normal.
+
+<div align="center"> 
+  <img src="readme_img/regla-empirica.png" width="30%">
+</div>
+
+<div align="center"> 
+  <img src="readme_img/distribucion-normal-histograma.jpg" width="70%">
+</div>
