@@ -1,1 +1,5 @@
 .DS_Store
+Script/Camino de borrachos/*.html
+Script/Camino de borrachos/__pycache__
+.vscode
+env
