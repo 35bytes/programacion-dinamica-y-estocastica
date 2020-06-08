@@ -583,5 +583,5 @@ Permite calcular probabilidades con la densidad de la distribución normal.
 </div>
 
 <div align="center"> 
-  <img src="readme_img/distribucion-normal-histograma.jpg" width="70%">
+  <img src="readme_img/distribucion-normal-grafico.png" width="70%">
 </div>
