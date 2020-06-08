@@ -24,6 +24,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Simulación de Probabilidades](#Simulación-de-Probabilidades)
     - [Inferencia Estadística](#Inferencia-Estadística)
     - [Media](#Media)
+    - [Varianza y Desviación Estándar](#Varianza-y-Desviación-Estándar)
 
 # Objetivos
 - Aprender cuándo utilizar Programación Dinámica y sus beneficios.
@@ -498,4 +499,60 @@ if __name__ == '__main__':
 
     print(f'Arreglo X: {X}')
     print(f'Media = {mu}')
+```
+
+## Varianza y Desviación Estándar
+
+### Varianza
+
+La **varianza** mide qué tan propagados se encuentran un conjunto de valores aleatorios de su media. Mientras que la **media** nos da una idea de dónde se encuentran los valores, la **varianza** nos dice que tan dispersos se encuentran. La **varianza** siempre debe entenderse con respecto a la media.
+
+<div align="center"> 
+  <img src="readme_img/varianza.png" width="30%">
+</div>
+
+### Desviación estándar
+
+La **desviación estándar** es la raíz cuadrada de la **varianza**. Nos permite entender, también, la propagación y se debe entender siempre relacionado con la **media**.
+
+La ventaja sobre la **varianza** es que la desviación estándar está en las mismas unidades que la **media**.
+
+<div align="center"> 
+  <img src="readme_img/desviacion-estandar.png" width="30%">
+</div>
+
+Vamos a implementar las funciones de **varianza** y **desviación estándar** en nuestro script ya hecho para la **media.**
+
+```py
+import random
+import math
+
+def media(X):
+    return sum(X) / len(X)
+
+
+def varianza(X):
+    mu = media(X)
+
+    acumulador = 0
+    for x in X:
+        acumulador += (x - mu)**2
+
+    return acumulador / len(X)
+
+
+def desviacion_estandar(X):
+    return math.sqrt(varianza(X))
+
+
+if __name__ == '__main__':
+    X = [random.randint(9, 12) for i in range(20)]
+    mu = media(X)
+    Var = varianza(X)
+    sigma = desviacion_estandar(X)
+
+    print(f'Arreglo X: {X}')
+    print(f'Media = {mu}')
+    print(f'Varianza = {Var}')
+    print(f'Desviacion estandar = {sigma}')
 ```
