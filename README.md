@@ -33,6 +33,9 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
 - [Muestreo e Intervalos de Confianza](#Muestreo-e-Intervalos-de-Confianza)
     - [Muestreo](#Muestreo)
     - [Teorema del Límite Central](#Teorema-del-Límite-Central)
+- [Datos Experimentales](#Datos-Experimentales)
+    - [¿Cómo trabajar con datos experimentales?](#¿Cómo-trabajar-con-datos-experimentales?)
+    - [Regresión Lineal](#Regresión-Lineal)
 
 # Objetivos
 - Aprender cuándo utilizar Programación Dinámica y sus beneficios.
@@ -741,3 +744,19 @@ Mientras más muestras obtengamos, mayor será la similitud con la distribución
 <div align="center"> 
   <img src="readme_img/limite-central.png" width="70%">
 </div>
+
+# Datos Experimentales
+
+## ¿Cómo trabajar con datos experimentales?
+
+Los **datos experimentales** son aquellos que se generan a través del **método científico**.
+
+- Con el **método científico** es necesario comenzar con una _teoría_ o _hipótesis_ sobre el resultado al que se quiere llegar. 
+- Basado en la _hipótesis_ se debe crear un experimento para **validad** o **falsear** la _hipótesis_.
+- Se **valida** o **falsea** una _hipótesis_ midiendo la diferencia entre las mediciones experimentales y aquellas mediciones predichas por la _hipótesis_.
+
+## Regresión Lineal
+
+La **regresión lineal** nos permite aproximar una función a un conjunto de datos obtenidos de manera experimental. No necesariamente permite aproximar funciones lineales, sino que sus variantes permiten aproximar cualquier **función polinómica.**
+
+Para ver un ejemplo de regresiones lineales en _Python_ en el siguiente enlace puedes acceder a ver un ejemplo: [Collab - Regresión Lineal.](https://colab.research.google.com/drive/1c0Lx0xQyxuoZsnVKZzMFcANykA5VWN5F#scrollTo=M-ydNFdSi8PN)
