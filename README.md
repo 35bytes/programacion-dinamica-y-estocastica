@@ -30,6 +30,8 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [¿Qué son las Simulaciones de Montecarlo?](#¿Qué-son-las-Simulaciones-de-Montecarlo?)
     - [Simulación de Barajas](#Simulación-de-Barajas)
     - [Cálculo de PI](#Cálculo-de-PI)
+- [Muestreo e Intervalos de Confianza](#Muestreo-e-Intervalos-de-Confianza)
+    - [Muestreo](#Muestreo)
 
 # Objetivos
 - Aprender cuándo utilizar Programación Dinámica y sus beneficios.
@@ -717,4 +719,14 @@ Est=3.143, sigma=0.01272, agujas=4000
 Est=3.14076, sigma=0.00949, agujas=8000
 Est=3.14142, sigma=0.00678, agujas=16000
 Est=3.14154, sigma=0.00457, agujas=32000
-````
+```
+
+# Muestreo e Intervalos de Confianza
+
+## Muestreo
+
+El **muestreo** es muy importante cuando no tenemos acceso a toda la población que queremos explorar. Uno de los grandes descubrimientos de la estadística es que las **muestras aleatorias** tienden a mostrar las mismas propiedades de la población objetivo. Hasta este punto todos los **muestreos** que hemos hecho son de tipo **probabilísticos**.
+
+En un **muestreo aleatorio** cualquier miembro de la población tiene la misma probabilidad de ser escogido.
+
+En un **muestreo estratificado** tomamos en consideración las características de la población para partirla en subgrupos y luego tomamos muestras de cada subgrupo, esto incrementa la probabilidad de que el muestreo sea representativo de la población.
