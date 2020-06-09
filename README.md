@@ -32,6 +32,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Cálculo de PI](#Cálculo-de-PI)
 - [Muestreo e Intervalos de Confianza](#Muestreo-e-Intervalos-de-Confianza)
     - [Muestreo](#Muestreo)
+    - [Teorema del Límite Central](#Teorema-del-Límite-Central)
 
 # Objetivos
 - Aprender cuándo utilizar Programación Dinámica y sus beneficios.
@@ -730,3 +731,13 @@ El **muestreo** es muy importante cuando no tenemos acceso a toda la población 
 En un **muestreo aleatorio** cualquier miembro de la población tiene la misma probabilidad de ser escogido.
 
 En un **muestreo estratificado** tomamos en consideración las características de la población para partirla en subgrupos y luego tomamos muestras de cada subgrupo, esto incrementa la probabilidad de que el muestreo sea representativo de la población.
+
+## Teorema del Límite Central
+
+El **teorema del límite central** es uno de los teoremas más importantes de la estadística. Establece que **muestras aleatorias** de cualquier distribución van a tener una **distribución normal**. Esto permite entender cualquier distribución como la **distribución normal de sus medias** y eso nos permite aplicar todo lo que sabemos de **distribuciones normales.**
+
+Mientras más muestras obtengamos, mayor será la similitud con la distribución normal. Mientras la muestra sea de mayor tamaño, la desviación estándar será menor.
+
+<div align="center"> 
+  <img src="readme_img/limite-central.png" width="70%">
+</div>
