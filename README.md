@@ -29,6 +29,7 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
 - [Simulaciones de Montecarlo](#Simulaciones-de-Montecarlo)
     - [¿Qué son las Simulaciones de Montecarlo?](#¿Qué-son-las-Simulaciones-de-Montecarlo?)
     - [Simulación de Barajas](#Simulación-de-Barajas)
+    - [Cálculo de PI](#Cálculo-de-PI)
 
 # Objetivos
 - Aprender cuándo utilizar Programación Dinámica y sus beneficios.
@@ -649,3 +650,71 @@ if __name__ == '__main__':
 
     main(tamano_mano, intentos)
 ```
+
+## Cálculo de PI
+
+Calcularemos PI con puntos al azar esparcidos en un plano cartesiano utilizando los scripts de **desviación estándar** y **media** que creados anteriormente. Queremos tener un **95% de certeza**, entonces para ello realizaremos el cálculo para 1/2 del área de un circulo, optimizando nuestros recursos.
+
+```py
+import random
+import math
+from estadisticas import desviacion_estandar, media
+
+def aventar_agujas(numero_de_agujas):
+    adentro_del_circulo = 0
+
+    for _ in range(numero_de_agujas):
+        x = random.random() * random.choice([-1, 1])
+        y = random.random() * random.choice([-1, 1])
+        distancia_desde_el_centro = math.sqrt(x**2 + y**2)
+
+        if distancia_desde_el_centro <= 1:
+            adentro_del_circulo += 1
+
+    # La variable adentro_del_circulo representa 1/4 del área del círculo,
+    # y como solo utilizaremos 1/2 vamos a multiplicarlo por 2.
+    return (2 * adentro_del_circulo) / numero_de_agujas
+
+
+def estimacion(numero_de_agujas, numero_de_intentos):
+    estimados = []
+    for _ in range(numero_de_intentos):
+        estimacion_pi = aventar_agujas(numero_de_agujas)
+        estimados.append(estimacion_pi)
+
+    media_estimados = media(estimados)
+    sigma = desviacion_estandar(estimados)
+
+    # La variable media_estimados tiene los resultados sobre 1/2 del área del
+    # círculo. Para obtener la estimación de PI completo lo vamos a multiplicar por 2.
+    print(f'Est={round(media_estimados, 5) * 2}, sigma={round(sigma, 5)}, agujas={numero_de_agujas}')
+
+    return (media_estimados, sigma)
+
+def estimar_pi(precision, numero_de_intentos):
+    numero_de_agujas = 1000
+    sigma = precision
+
+    while sigma >= precision / 1.96:
+        media, sigma = estimacion(numero_de_agujas, numero_de_intentos)
+        numero_de_agujas *= 2
+
+    return media
+
+if __name__ == '__main__':
+    estimar_pi(0.01, 1000)
+```
+
+Vamos a la consola y ejecutamos nuestro programa.
+
+```bash
+python3 calculo_pi.py   # Ejecutamos nuestro script.
+
+# Y estos serán nuestros resultados.
+Est=3.14234, sigma=0.02594, agujas=1000
+Est=3.13966, sigma=0.01795, agujas=2000
+Est=3.143, sigma=0.01272, agujas=4000
+Est=3.14076, sigma=0.00949, agujas=8000
+Est=3.14142, sigma=0.00678, agujas=16000
+Est=3.14154, sigma=0.00457, agujas=32000
+````
