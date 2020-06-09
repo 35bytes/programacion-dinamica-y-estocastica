@@ -26,6 +26,8 @@ El contenido de este documento esta basado en el curso del mismo nombre dictado 
     - [Media](#Media)
     - [Varianza y Desviación Estándar](#Varianza-y-Desviación-Estándar)
     - [Distribución Normal](#Distribución-Normal)
+- [Simulaciones de Montecarlo](#Simulaciones-de-Montecarlo)
+    - [¿Qué son las Simulaciones de Montecarlo?](#¿Qué-son-las-Simulaciones-de-Montecarlo?)
 
 # Objetivos
 - Aprender cuándo utilizar Programación Dinámica y sus beneficios.
@@ -585,3 +587,11 @@ Permite calcular probabilidades con la densidad de la distribución normal.
 <div align="center"> 
   <img src="readme_img/distribucion-normal-grafico.png" width="70%">
 </div>
+
+# Simulaciones de Montecarlo
+
+## ¿Qué son las Simulaciones de Montecarlo?
+
+Permite crear simulaciones para predecir el resultado de un problema, además de convertir problemas determinísticos en problemas estocásticos.
+
+Es utilizado en gran diversidad de áreas, desde la ingeniería hasta la biología y el derecho.
